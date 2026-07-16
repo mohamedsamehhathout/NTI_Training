@@ -1,0 +1,13 @@
+CREATE DATABASE myStore;
+
+USE myStore;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+ALTER TABLE users
+ADD email VARCHAR(100) NOT NULL UNIQUE;
